@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; UAS-5 My Professional Reviews – Armein Z. R. Langi</title>
+<title>10&nbsp; UAS-5 My Professional Reviews – Aldyto Rafif Abhinaya</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
       <a href="../index.html" class="sidebar-logo-link">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Armein Z. R. Langi</a> 
+      <a href="../">Aldyto Rafif Abhinaya</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -206,6 +206,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="metodologi-evaluasi-profesional-berbasis-ai" class="level3">
 <h3>Metodologi Evaluasi Profesional Berbasis AI</h3>
 <p>Sebagai seorang rekayasawan STI, kemampuan menciptakan sistem saja tidak cukup; kita juga harus mampu mengevaluasi kualitas sistem tersebut secara objektif. Mengacu pada referensi materi kuliah "Menilai dan Mengevaluasi Esai Berdasarkan Rubrik", saya mengadopsi pendekatan modern dalam melakukan tinjauan profesional.</p>
+
 <p>Proses evaluasi tradisional sering kali subyektif dan memakan waktu. Oleh karena itu, saya menggunakan bantuan Kecerdasan Buatan (AI) seperti Google Gemini atau ChatGPT sebagai "mitra penilai" yang objektif. Proses ini melibatkan tiga komponen utama:</p>
 <ol>
 <li><strong>Artefak:</strong> Karya yang akan dinilai (Dalam hal ini, inovasi "Amerta-Link").</li>
@@ -261,6 +262,11 @@ Berikut adalah ringkasan hasil evaluasi mesin terhadap inovasi saya:</p>
 
 <p><strong>Kesimpulan Profesional:</strong><br>
 Pendekatan ini membuktikan bahwa inovasi "Amerta-Link" layak secara konseptual. Dengan menggunakan metode evaluasi berbasis rubrik dan AI, saya dapat mengidentifikasi kelemahan sistem sebelum implementasi nyata, memastikan bahwa produk akhir nantinya benar-benar berkualitas tinggi.</p>
+
+<p><strong>Akses Data Lengkap:</strong><br>
+Untuk melihat transparansi proses penilaian, detail skor per kriteria, serta rekapitulasi lengkap dari seluruh mahasiswa, silakan akses dokumen berikut:<br>
+<a href="https://docs.google.com/spreadsheets/d/1taGfA0KFvn-SutMwYbkqApiQQwurxIQAzmLzKJo2bYs/edit?usp=sharing" target="_blank"><strong>🔗 Link Google Sheets: UAS-5 Skor & Rekapitulasi</strong></a></p>
+
 </section>
 
 </main> <script id="quarto-html-after-body" type="application/javascript">
@@ -487,6 +493,9 @@ Pendekatan ini membuktikan bahwa inovasi "Amerta-Link" layak secara konseptual. 
         } else {
           // See if we can fetch a full url (with no hash to target)
           // This is a special case and we should probably do some content thinning / targeting
+          // This should only happen for chapter cross references
+          // (since there is no id in the URL)
+          // remove the first header
           fetch(url)
           .then(res => res.text())
           .then(html => {
@@ -494,9 +503,6 @@ Pendekatan ini membuktikan bahwa inovasi "Amerta-Link" layak secara konseptual. 
             const htmlDoc = parser.parseFromString(html, "text/html");
             const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
               if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
                 note.children[0].remove();
               }
